@@ -17,7 +17,9 @@
 		92528C7228E6E20E0009F65F /* FruitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7128E6E20E0009F65F /* FruitAPI.swift */; };
 		92528C7428E6E2A90009F65F /* FruitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7328E6E2A90009F65F /* FruitList.swift */; };
 		92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7528E6E2F00009F65F /* FruitInfos.swift */; };
-		92528C7B28E6F1F20009F65F /* TestSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7A28E6F1F20009F65F /* TestSearchBar.swift */; };
+		92528C7D28E7143E0009F65F /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7C28E7143E0009F65F /* ShoppingListView.swift */; };
+		92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7E28E7144B0009F65F /* ShoppingListModel.swift */; };
+		92528C8128E715620009F65F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8028E715620009F65F /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,9 @@
 		92528C7128E6E20E0009F65F /* FruitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitAPI.swift; sourceTree = "<group>"; };
 		92528C7328E6E2A90009F65F /* FruitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitList.swift; sourceTree = "<group>"; };
 		92528C7528E6E2F00009F65F /* FruitInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitInfos.swift; sourceTree = "<group>"; };
-		92528C7A28E6F1F20009F65F /* TestSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchBar.swift; sourceTree = "<group>"; };
+		92528C7C28E7143E0009F65F /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
+		92528C7E28E7144B0009F65F /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
+		92528C8028E715620009F65F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,10 @@
 		92528C4628E6E1F00009F65F /* FruitSearcher */ = {
 			isa = PBXGroup;
 			children = (
-				92528C7928E6F1E50009F65F /* Tests */,
-				92528C7828E6F1CD0009F65F /* FruitsComposent */,
+				92528C8228E7157E0009F65F /* Layout */,
+				92528C7928E6F1E50009F65F /* Model */,
+				92528C7828E6F1CD0009F65F /* View */,
 				92528C7728E6F1B40009F65F /* API */,
-				92528C4928E6E1F00009F65F /* ContentView.swift */,
 				92528C4728E6E1F00009F65F /* FruitSearcherApp.swift */,
 				92528C4B28E6E1F20009F65F /* Assets.xcassets */,
 				92528C4D28E6E1F20009F65F /* Preview Content */,
@@ -146,21 +150,31 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		92528C7828E6F1CD0009F65F /* FruitsComposent */ = {
+		92528C7828E6F1CD0009F65F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92528C7C28E7143E0009F65F /* ShoppingListView.swift */,
 				92528C7328E6E2A90009F65F /* FruitList.swift */,
 				92528C7528E6E2F00009F65F /* FruitInfos.swift */,
 			);
-			path = FruitsComposent;
+			path = View;
 			sourceTree = "<group>";
 		};
-		92528C7928E6F1E50009F65F /* Tests */ = {
+		92528C7928E6F1E50009F65F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92528C7A28E6F1F20009F65F /* TestSearchBar.swift */,
+				92528C7E28E7144B0009F65F /* ShoppingListModel.swift */,
 			);
-			path = Tests;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92528C8228E7157E0009F65F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				92528C8028E715620009F65F /* TabBar.swift */,
+				92528C4928E6E1F00009F65F /* ContentView.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92528C7D28E7143E0009F65F /* ShoppingListView.swift in Sources */,
+				92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */,
+				92528C8128E715620009F65F /* TabBar.swift in Sources */,
 				92528C7428E6E2A90009F65F /* FruitList.swift in Sources */,
 				92528C4A28E6E1F00009F65F /* ContentView.swift in Sources */,
 				92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */,
-				92528C7B28E6F1F20009F65F /* TestSearchBar.swift in Sources */,
 				92528C4828E6E1F00009F65F /* FruitSearcherApp.swift in Sources */,
 				92528C7228E6E20E0009F65F /* FruitAPI.swift in Sources */,
 			);
