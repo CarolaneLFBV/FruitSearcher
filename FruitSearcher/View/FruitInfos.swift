@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct FruitInfos: View {
-    var fruit: Fruit
+    @State var fruit: Fruit
+    
+    /**func addToFavorites() {
+        fruit.isFavorite.toggle()
+        UserDefaults.standard.set(fruit.isFavorite, forKey: "\(fruit.name)isFavorite")
+    }**/
     
     var body: some View {
         VStack {
             Text(fruit.name)
                 .font(.system(size: 30))
                 
+            Spacer()
+                .frame(height: 1)
+            
             Image(fruit.name)
                 .resizable()
                 .scaledToFit()
@@ -40,6 +48,15 @@ struct FruitInfos: View {
                     
                 }
             }
+            
+            /**HStack {
+                Button() {
+                    addToFavorites()
+                } label:{
+                    Label(fruit.isFavorite ? "Favoris" : "Favoris" , systemImage: fruit.isFavorite ? "star.fill" : "star") .foregroundColor(.orange)
+                        .font(.system(size: 20, weight: .regular, design: .default))
+                }
+            }**/
             Spacer()
         }
     }

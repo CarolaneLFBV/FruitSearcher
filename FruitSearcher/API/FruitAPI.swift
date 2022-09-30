@@ -7,23 +7,6 @@
 
 import Foundation
 
-struct Fruit: Codable, Identifiable {
-    var id: Int
-    var name: String
-    var family: String
-    var order: String
-    var nutritions: Nutritions
-}
-
-struct Nutritions: Codable {
-    var carbohydrates: Double
-    var protein: Double
-    var fat: Double
-    var calories: Double
-    var sugar: Double
-}
-
-
 class FruitAPI : ObservableObject{
     @Published var fruits = [Fruit]()
     

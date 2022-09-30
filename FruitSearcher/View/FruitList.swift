@@ -39,7 +39,8 @@ struct FruitList: View {
                     }
                 }
                 .searchable(text: $searchText)
-                .navigationTitle("Liste des fruits")
+                .navigationTitle("Fruit list")
+                .navigationBarTitleDisplayMode(.inline)
                 
             }
             .onAppear {

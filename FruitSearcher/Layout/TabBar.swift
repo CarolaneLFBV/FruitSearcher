@@ -13,13 +13,14 @@ struct TabBar: View {
             FruitList()
                 .tabItem {
                     Image(systemName: "basket")
-                    Text("Fruit List")
+                    Text("Fruit list")
                 }
+        
             
             ShoppingListView()
                 .tabItem {
                     Image(systemName: "cart.badge.plus")
-                    Text("Liste de course")
+                    Text("Shopping list")
                 }
         }
     }
