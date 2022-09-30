@@ -14,6 +14,9 @@
 		92528C5928E6E1F20009F65F /* FruitSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C5828E6E1F20009F65F /* FruitSearcherTests.swift */; };
 		92528C6328E6E1F20009F65F /* FruitSearcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C6228E6E1F20009F65F /* FruitSearcherUITests.swift */; };
 		92528C6528E6E1F20009F65F /* FruitSearcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C6428E6E1F20009F65F /* FruitSearcherUITestsLaunchTests.swift */; };
+		92528C7228E6E20E0009F65F /* FruitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7128E6E20E0009F65F /* FruitAPI.swift */; };
+		92528C7428E6E2A90009F65F /* FruitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7328E6E2A90009F65F /* FruitList.swift */; };
+		92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7528E6E2F00009F65F /* FruitInfos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		92528C5E28E6E1F20009F65F /* FruitSearcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitSearcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92528C6228E6E1F20009F65F /* FruitSearcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitSearcherUITests.swift; sourceTree = "<group>"; };
 		92528C6428E6E1F20009F65F /* FruitSearcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitSearcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92528C7128E6E20E0009F65F /* FruitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitAPI.swift; sourceTree = "<group>"; };
+		92528C7328E6E2A90009F65F /* FruitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitList.swift; sourceTree = "<group>"; };
+		92528C7528E6E2F00009F65F /* FruitInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitInfos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,11 @@
 		92528C4628E6E1F00009F65F /* FruitSearcher */ = {
 			isa = PBXGroup;
 			children = (
-				92528C4728E6E1F00009F65F /* FruitSearcherApp.swift */,
+				92528C7128E6E20E0009F65F /* FruitAPI.swift */,
 				92528C4928E6E1F00009F65F /* ContentView.swift */,
+				92528C7328E6E2A90009F65F /* FruitList.swift */,
+				92528C7528E6E2F00009F65F /* FruitInfos.swift */,
+				92528C4728E6E1F00009F65F /* FruitSearcherApp.swift */,
 				92528C4B28E6E1F20009F65F /* Assets.xcassets */,
 				92528C4D28E6E1F20009F65F /* Preview Content */,
 			);
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92528C7428E6E2A90009F65F /* FruitList.swift in Sources */,
 				92528C4A28E6E1F00009F65F /* ContentView.swift in Sources */,
+				92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */,
 				92528C4828E6E1F00009F65F /* FruitSearcherApp.swift in Sources */,
+				92528C7228E6E20E0009F65F /* FruitAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
