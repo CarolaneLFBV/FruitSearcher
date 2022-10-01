@@ -21,11 +21,13 @@
 		92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7E28E7144B0009F65F /* ShoppingListModel.swift */; };
 		92528C8128E715620009F65F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8028E715620009F65F /* TabBar.swift */; };
 		92528C8428E738810009F65F /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8328E738810009F65F /* FruitModel.swift */; };
-		92528C8628E75B820009F65F /* FruitRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8528E75B820009F65F /* FruitRecognition.mlmodel */; };
 		92528C8A28E75C370009F65F /* FruitML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8928E75C370009F65F /* FruitML.swift */; };
 		92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8B28E75CC60009F65F /* ImageClassifier.swift */; };
 		92528C8E28E75CF80009F65F /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8D28E75CF80009F65F /* Classifier.swift */; };
 		92528C9028E75D690009F65F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8F28E75D690009F65F /* ImagePicker.swift */; };
+		9291B4A628E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
+		9291B4A728E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
+		9291B4A828E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
 		92F150B328E82087005B4804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F150B228E82087005B4804 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -64,11 +66,11 @@
 		92528C7E28E7144B0009F65F /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		92528C8028E715620009F65F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		92528C8328E738810009F65F /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
-		92528C8528E75B820009F65F /* FruitRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitRecognition.mlmodel; sourceTree = "<group>"; };
 		92528C8928E75C370009F65F /* FruitML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitML.swift; sourceTree = "<group>"; };
 		92528C8B28E75CC60009F65F /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		92528C8D28E75CF80009F65F /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		92528C8F28E75D690009F65F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		92F150B128E81DE2005B4804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92F150B228E82087005B4804 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 		92528C7828E6F1CD0009F65F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92528C8928E75C370009F65F /* FruitML.swift */,
 				92528C7C28E7143E0009F65F /* ShoppingListView.swift */,
 				92528C7328E6E2A90009F65F /* FruitList.swift */,
 				92528C7528E6E2F00009F65F /* FruitInfos.swift */,
@@ -199,11 +202,10 @@
 		92528C8728E75B880009F65F /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				92528C8928E75C370009F65F /* FruitML.swift */,
 				92528C8B28E75CC60009F65F /* ImageClassifier.swift */,
 				92528C8D28E75CF80009F65F /* Classifier.swift */,
 				92528C8F28E75D690009F65F /* ImagePicker.swift */,
-				92528C8528E75B820009F65F /* FruitRecognition.mlmodel */,
+				9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -342,11 +344,11 @@
 				92528C7D28E7143E0009F65F /* ShoppingListView.swift in Sources */,
 				92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */,
 				92528C8128E715620009F65F /* TabBar.swift in Sources */,
+				9291B4A628E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 				92528C9028E75D690009F65F /* ImagePicker.swift in Sources */,
 				92528C8E28E75CF80009F65F /* Classifier.swift in Sources */,
 				92528C8A28E75C370009F65F /* FruitML.swift in Sources */,
 				92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */,
-				92528C8628E75B820009F65F /* FruitRecognition.mlmodel in Sources */,
 				92528C7428E6E2A90009F65F /* FruitList.swift in Sources */,
 				92528C4A28E6E1F00009F65F /* ContentView.swift in Sources */,
 				92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */,
@@ -360,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9291B4A728E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 				92528C5928E6E1F20009F65F /* FruitSearcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +373,7 @@
 			files = (
 				92528C6528E6E1F20009F65F /* FruitSearcherUITestsLaunchTests.swift in Sources */,
 				92528C6328E6E1F20009F65F /* FruitSearcherUITests.swift in Sources */,
+				9291B4A828E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,15 @@ final class FruitSearcherUITests: XCTestCase {
         app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Apple"]/*[[".cells.buttons[\"Apple\"]",".buttons[\"Apple\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["_TtGC7SwiftUI32NavigationStackHosting"].buttons["Fruit list"].tap()
     }
+    
+    func testCoreML() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tabBars["Tab Bar"].buttons["Fruit Recognition"].tap()
+                
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {

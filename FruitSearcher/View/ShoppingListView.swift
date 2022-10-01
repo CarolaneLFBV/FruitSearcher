@@ -38,7 +38,6 @@ struct ShoppingListView: View {
             UserDefaults.standard.set(nextUD, forKey: "\(i)Added")
         }
         UserDefaults.standard.removeObject(forKey: "\(addedIngredients-1)Added")
-        
         shoppingListStorage.shoppinglists.remove(atOffsets: offsets)
         addedIngredients -= 1
         UserDefaults.standard.set(addedIngredients, forKey: "NumberIngredients")

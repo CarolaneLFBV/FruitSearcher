@@ -10,11 +10,6 @@ import SwiftUI
 struct FruitInfos: View {
     @State var fruit: Fruit
     
-    /**func addToFavorites() {
-        fruit.isFavorite.toggle()
-        UserDefaults.standard.set(fruit.isFavorite, forKey: "\(fruit.name)isFavorite")
-    }**/
-    
     var body: some View {
         VStack {
             Text(fruit.name)
@@ -30,7 +25,7 @@ struct FruitInfos: View {
                 .padding()
             
             VStack {
-                Text(fruit.family)
+                Text("\(fruit.family)")
             }
             
             VStack() {
@@ -45,18 +40,8 @@ struct FruitInfos: View {
                         .font(.system(size: 15, weight: .bold))
                     Text("Sugar : \(fruit.nutritions.sugar, specifier: "%.2f")")
                         .font(.system(size: 15, weight: .bold))
-                    
                 }
             }
-            
-            /**HStack {
-                Button() {
-                    addToFavorites()
-                } label:{
-                    Label(fruit.isFavorite ? "Favoris" : "Favoris" , systemImage: fruit.isFavorite ? "star.fill" : "star") .foregroundColor(.orange)
-                        .font(.system(size: 20, weight: .regular, design: .default))
-                }
-            }**/
             Spacer()
         }
     }

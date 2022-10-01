@@ -14,7 +14,8 @@ struct Classifier {
     private(set) var results: String?
     
     mutating func detect(ciImage: CIImage) {
-        guard let model = try? VNCoreMLModel(for: FruitRecognition(configuration: MLModelConfiguration()).model)
+        
+        guard let model = try? VNCoreMLModel(for: MobileNetV2(configuration: MLModelConfiguration()).model)
         else {
             return
         }

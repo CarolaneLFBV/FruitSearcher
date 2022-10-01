@@ -15,9 +15,9 @@ class ImageClassifier: ObservableObject {
     var imageClass: String? {
         classifier.results
     }
-    
-    // MARK: Intents
-    func detect(uiImage: UIImage){
+        
+    // MARK: Intent(s)
+    func detect(uiImage: UIImage) {
         guard let ciImage = CIImage (image: uiImage) else { return }
         classifier.detect(ciImage: ciImage)
     }
