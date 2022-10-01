@@ -22,6 +22,12 @@ struct TabBar: View {
                     Image(systemName: "cart.badge.plus")
                     Text("Shopping list")
                 }
+            
+            FruitML(classifier: ImageClassifier())
+                .tabItem {
+                    Image(systemName: "camera")
+                    Text("Fruit Recognition")
+                }
         }
     }
 }

@@ -21,6 +21,11 @@
 		92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7E28E7144B0009F65F /* ShoppingListModel.swift */; };
 		92528C8128E715620009F65F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8028E715620009F65F /* TabBar.swift */; };
 		92528C8428E738810009F65F /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8328E738810009F65F /* FruitModel.swift */; };
+		92528C8628E75B820009F65F /* FruitRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8528E75B820009F65F /* FruitRecognition.mlmodel */; };
+		92528C8A28E75C370009F65F /* FruitML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8928E75C370009F65F /* FruitML.swift */; };
+		92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8B28E75CC60009F65F /* ImageClassifier.swift */; };
+		92528C8E28E75CF80009F65F /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8D28E75CF80009F65F /* Classifier.swift */; };
+		92528C9028E75D690009F65F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8F28E75D690009F65F /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		92528C7E28E7144B0009F65F /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		92528C8028E715620009F65F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		92528C8328E738810009F65F /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
+		92528C8528E75B820009F65F /* FruitRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitRecognition.mlmodel; sourceTree = "<group>"; };
+		92528C8928E75C370009F65F /* FruitML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitML.swift; sourceTree = "<group>"; };
+		92528C8B28E75CC60009F65F /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		92528C8D28E75CF80009F65F /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		92528C8F28E75D690009F65F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 		92528C4628E6E1F00009F65F /* FruitSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				92528C8728E75B880009F65F /* CoreML */,
 				92528C8228E7157E0009F65F /* Layout */,
 				92528C7928E6F1E50009F65F /* Model */,
 				92528C7828E6F1CD0009F65F /* View */,
@@ -178,6 +189,18 @@
 				92528C4928E6E1F00009F65F /* ContentView.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		92528C8728E75B880009F65F /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				92528C8928E75C370009F65F /* FruitML.swift */,
+				92528C8B28E75CC60009F65F /* ImageClassifier.swift */,
+				92528C8D28E75CF80009F65F /* Classifier.swift */,
+				92528C8F28E75D690009F65F /* ImagePicker.swift */,
+				92528C8528E75B820009F65F /* FruitRecognition.mlmodel */,
+			);
+			path = CoreML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +336,11 @@
 				92528C7D28E7143E0009F65F /* ShoppingListView.swift in Sources */,
 				92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */,
 				92528C8128E715620009F65F /* TabBar.swift in Sources */,
+				92528C9028E75D690009F65F /* ImagePicker.swift in Sources */,
+				92528C8E28E75CF80009F65F /* Classifier.swift in Sources */,
+				92528C8A28E75C370009F65F /* FruitML.swift in Sources */,
+				92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */,
+				92528C8628E75B820009F65F /* FruitRecognition.mlmodel in Sources */,
 				92528C7428E6E2A90009F65F /* FruitList.swift in Sources */,
 				92528C4A28E6E1F00009F65F /* ContentView.swift in Sources */,
 				92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */,
@@ -480,6 +508,8 @@
 				DEVELOPMENT_TEAM = 2VP2J2SZVR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FruitSearcher;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -512,6 +542,8 @@
 				DEVELOPMENT_TEAM = 2VP2J2SZVR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FruitSearcher;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

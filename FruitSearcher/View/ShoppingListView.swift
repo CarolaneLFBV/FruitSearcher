@@ -16,9 +16,9 @@ struct ShoppingListView: View {
  
     var searchBar: some View {
         HStack {
-            TextField("Ajouter un ingrédient", text: self.$newIngredient)
+            TextField("Add an ingredient", text: self.$newIngredient)
             Button(action: addIngredient, label: {
-                Text("Ajouter")
+                Text("Add")
             })
         }
     }
@@ -53,7 +53,7 @@ struct ShoppingListView: View {
                         Text(shoppinglist.shoppingItem)
                     }.onDelete(perform: self.deleteItem)
                 }
-                .navigationTitle("Liste de course 🛒")
+                .navigationTitle("ShoppingList 🛒")
                 .navigationBarItems(trailing: EditButton())
             }
         }
