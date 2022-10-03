@@ -11,38 +11,42 @@ struct FruitInfos: View {
     @State var fruit: Fruit
     
     var body: some View {
-        VStack {
-            Text(fruit.name)
-                .font(.system(size: 30))
-                
-            Spacer()
-                .frame(height: 1)
-            
-            Image(fruit.name)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-                .padding()
+        ZStack {
+            Color("ColorPurple").opacity(0.1)
+                .ignoresSafeArea()
             
             VStack {
-                Text("\(fruit.family)")
-            }
-            
-            VStack() {
-                List {
-                    Text("Carbohydrates : \(fruit.nutritions.carbohydrates, specifier: "%.2f")")
-                        .font(.system(size: 15, weight: .bold))
-                    Text("Protein : \(fruit.nutritions.protein, specifier: "%.2f")")
-                        .font(.system(size: 15, weight: .bold))
-                    Text("Fat : \(fruit.nutritions.fat, specifier: "%.2f")")
-                        .font(.system(size: 15, weight: .bold))
-                    Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
-                        .font(.system(size: 15, weight: .bold))
-                    Text("Sugar : \(fruit.nutritions.sugar, specifier: "%.2f")")
-                        .font(.system(size: 15, weight: .bold))
+                Text(fruit.name)
+                    .font(.system(size: 30))
+                    
+                Spacer()
+                    .frame(height: 1)
+                
+                Image(fruit.name)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(30)
+                    .padding()
+                
+                HStack {
+                    Text("Fruit's family:")
+                    
+                    Text(fruit.family)
+                        .foregroundColor(Color("ColorPurple"))
                 }
+            
+                    List {
+                        Text("Carbohydrates : \(fruit.nutritions.carbohydrates, specifier: "%.2f")")
+                        Text("Protein : \(fruit.nutritions.protein, specifier: "%.2f")")
+                        Text("Fat : \(fruit.nutritions.fat, specifier: "%.2f")")
+                        Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+                        Text("Sugar : \(fruit.nutritions.sugar, specifier: "%.2f")")
+                    }
+                    .font(.system(size: 15, weight: .bold))
+                    .scrollContentBackground(.hidden)
+                
             }
-            Spacer()
         }
     }
 }

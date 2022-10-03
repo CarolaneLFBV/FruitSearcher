@@ -21,33 +21,39 @@ struct FruitList: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                List {
-                    ForEach(searchResults) { fruit in
-                        NavigationLink(destination: FruitInfos(fruit: fruit)) {
-                            HStack {
-                                Image(fruit.name)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50 , height: 50)
-                                    .padding()
-                                
-                                Text(fruit.name)
-                                    .font(.system(size: 20, weight: .medium))
+            ZStack {
+                Color("ColorPurple").opacity(0.1)
+                    .ignoresSafeArea()
+                
+                VStack {
+                    List {
+                        ForEach(searchResults) { fruit in
+                            NavigationLink(destination: FruitInfos(fruit: fruit)) {
+                                HStack {
+                                    Image(fruit.name)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50 , height: 50)
+                                        .padding()
+                                    
+                                    Text(fruit.name)
+                                        .font(.system(size: 20, weight: .medium))
+                                }
                             }
                         }
                     }
+                    .searchable(text: $searchText)
+                    .navigationTitle("Fruit list")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .scrollContentBackground(.hidden)
+                    
                 }
-                .searchable(text: $searchText)
-                .navigationTitle("Fruit list")
-                .navigationBarTitleDisplayMode(.inline)
-                
+                .onAppear {
+                    FruitAPI().loadData { (fruits) in
+                        self.fruits = fruits
+                    }
             }
-            .onAppear {
-                FruitAPI().loadData { (fruits) in
-                    self.fruits = fruits
-                }
-        }
+            }
         }
     }
 }

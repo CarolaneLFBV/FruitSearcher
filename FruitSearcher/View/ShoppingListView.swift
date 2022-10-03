@@ -53,6 +53,7 @@ struct ShoppingListView: View {
                     }.onDelete(perform: self.deleteItem)
                 }
                 .navigationTitle("ShoppingList 🛒")
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: EditButton())
             }
         }

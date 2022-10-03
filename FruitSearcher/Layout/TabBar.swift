@@ -15,7 +15,6 @@ struct TabBar: View {
                     Image(systemName: "basket")
                     Text("Fruit list")
                 }
-        
             
             ShoppingListView()
                 .tabItem {
