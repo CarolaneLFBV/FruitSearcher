@@ -18,7 +18,8 @@ struct ShoppingListView: View {
         HStack {
             TextField("Add an ingredient", text: self.$newIngredient)
             Button(action: addIngredient, label: {
-                Text("Add")
+                Image(systemName: "plus")
+                    .foregroundColor(Color("ColorPurple"))
             })
         }
     }
@@ -44,7 +45,7 @@ struct ShoppingListView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 searchBar.padding()
                 List {
@@ -54,10 +55,9 @@ struct ShoppingListView: View {
                 }
                 .navigationTitle("ShoppingList 🛒")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: EditButton())
+                //.navigationBarItems(trailing: EditButton())
             }
         }
-
         .onAppear(perform: {
             if didLoad {
                 addedIngredients = UserDefaults.standard.integer(forKey: "NumberIngredients")

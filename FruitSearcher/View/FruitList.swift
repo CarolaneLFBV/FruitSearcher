@@ -21,10 +21,6 @@ struct FruitList: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color("ColorPurple").opacity(0.1)
-                    .ignoresSafeArea()
-                
                 VStack {
                     List {
                         ForEach(searchResults) { fruit in
@@ -41,19 +37,18 @@ struct FruitList: View {
                                 }
                             }
                         }
+                        
                     }
                     .searchable(text: $searchText)
                     .navigationTitle("Fruit list")
                     .navigationBarTitleDisplayMode(.inline)
                     .scrollContentBackground(.hidden)
-                    
                 }
                 .onAppear {
                     FruitAPI().loadData { (fruits) in
                         self.fruits = fruits
                     }
-            }
-            }
+                }
         }
     }
 }
