@@ -30,17 +30,55 @@ struct FruitInfos: View {
                     
                     Text(fruit.family)
                         .foregroundColor(Color("ColorPurple"))
+                        .bold()
                 }
             
-                List {
-                    Text("Carbohydrates : \(fruit.nutritions.carbohydrates, specifier: "%.2f")")
-                    Text("Protein : \(fruit.nutritions.protein, specifier: "%.2f")")
-                    Text("Fat : \(fruit.nutritions.fat, specifier: "%.2f")")
-                    Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
-                    Text("Sugar : \(fruit.nutritions.sugar, specifier: "%.2f")")
-                }
-                .font(.system(size: 15, weight: .bold))
-                .scrollContentBackground(.hidden)
+                Spacer()
+                    .frame(height: 80)
+    
+                VStack {
+                    List {
+                        Section("Description :") {
+                            HStack {
+                                Text("Carbohydrates: ")
+                                Spacer()
+                                Text("\(fruit.nutritions.carbohydrates, specifier: "%.2f")")
+                                    .foregroundColor(Color("ColorPurple"))
+                            }
+                            
+                            HStack {
+                                Text("Protein: ")
+                                Spacer()
+                                Text("\(fruit.nutritions.protein, specifier: "%.2f")")
+                                    .foregroundColor(Color("ColorPurple"))
+                            }
+                            
+                            HStack {
+                                Text("Fat: ")
+                                Spacer()
+                                Text("\(fruit.nutritions.fat, specifier: "%.2f")")
+                                    .foregroundColor(Color("ColorPurple"))
+                            }
+                            
+                            HStack {
+                                Text("Calories: ")
+                                Spacer()
+                                Text("\(fruit.nutritions.calories, specifier: "%.2f")")
+                                    .foregroundColor(Color("ColorPurple"))
+                            }
+                            
+                            HStack {
+                                Text("Sugar: ")
+                                Spacer()
+                                Text("\(fruit.nutritions.sugar, specifier: "%.2f")")
+                                    .foregroundColor(Color("ColorPurple"))
+                            }
+
+                        }
+                    }
+                    .font(.system(size: 15, weight: .bold))
+                    .scrollContentBackground(.hidden)
+            }
         }
     }
 }
