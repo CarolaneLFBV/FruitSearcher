@@ -40,13 +40,14 @@ final class FruitSearcherUITests: XCTestCase {
         app.navigationBars["_TtGC7SwiftUI32NavigationStackHosting"].buttons["Fruit list"].tap()
     }
     
-    func testCoreML() throws {
-        // UI tests must launch the application that they test.
+    func testShopping() throws {
         let app = XCUIApplication()
         app.launch()
         
-        app.tabBars["Tab Bar"].buttons["Fruit Recognition"].tap()
-                
+        app.tabBars["Tab Bar"].buttons["Shopping list"].tap()
+        app.buttons["Add"].tap()
+        app.collectionViews.cells.children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .staticText).element.swipeLeft()
+        
     }
 
     func testLaunchPerformance() throws {
