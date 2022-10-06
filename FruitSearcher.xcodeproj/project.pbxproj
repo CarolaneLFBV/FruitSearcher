@@ -27,9 +27,6 @@
 		92528C9028E75D690009F65F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8F28E75D690009F65F /* ImagePicker.swift */; };
 		926872A828EEE8FC0089C811 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */; };
 		927CFE7628EEB65B001F5D0C /* fruit.json in Resources */ = {isa = PBXBuildFile; fileRef = 927CFE7528EEB65B001F5D0C /* fruit.json */; };
-		9291B4A628E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
-		9291B4A728E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
-		9291B4A828E89EF9002F774B /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */; };
 		92F150B328E82087005B4804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F150B228E82087005B4804 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +71,6 @@
 		92528C8F28E75D690009F65F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
 		927CFE7528EEB65B001F5D0C /* fruit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fruit.json; sourceTree = "<group>"; };
-		9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		92F150B128E81DE2005B4804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92F150B228E82087005B4804 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,7 +207,6 @@
 				92528C8D28E75CF80009F65F /* Classifier.swift */,
 				92528C8F28E75D690009F65F /* ImagePicker.swift */,
 				926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */,
-				9291B4A528E89EF9002F774B /* MobileNetV2.mlmodel */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -352,7 +347,6 @@
 				92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */,
 				92528C8128E715620009F65F /* TabBar.swift in Sources */,
 				926872A828EEE8FC0089C811 /* FruitClassifier.mlmodel in Sources */,
-				9291B4A628E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 				92528C9028E75D690009F65F /* ImagePicker.swift in Sources */,
 				92528C8E28E75CF80009F65F /* Classifier.swift in Sources */,
 				92528C8A28E75C370009F65F /* FruitML.swift in Sources */,
@@ -370,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9291B4A728E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 				92528C5928E6E1F20009F65F /* FruitSearcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +374,6 @@
 			files = (
 				92528C6528E6E1F20009F65F /* FruitSearcherUITestsLaunchTests.swift in Sources */,
 				92528C6328E6E1F20009F65F /* FruitSearcherUITests.swift in Sources */,
-				9291B4A828E89EF9002F774B /* MobileNetV2.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
