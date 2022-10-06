@@ -13,7 +13,7 @@ extension UIColor {
             red: .random(in: 0...1),
             green: .random(in: 0...1),
             blue: .random(in: 0...1),
-            alpha: 1.0
+            alpha: 0.3
         )
     }
 }
@@ -28,7 +28,7 @@ struct FruitInfos: View {
             
             VStack {
                     Text(fruit.name)
-                        .font(.system(size: 30))
+                    .font(.system(size: 30, weight: .bold, design: .none))
                         .foregroundColor(Color("ColorPurple"))
                         
                     Spacer()
