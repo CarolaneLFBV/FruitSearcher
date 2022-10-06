@@ -8,7 +8,7 @@ can also interact with a fruit recognition coreML model that recognizes fruits.
 ## Fruit List
 ### Interact with the list
 The user can interact with the list by clicking on one of the elements available on the interface.
-Each time the user interact with an element, his background will display a different color. Just a little bit of fun right here :)
+Each time the user interact with an element, the background will display a different color. Just a little bit of fun right here :)
 
 <div align="center">
 <img width="300" height="430" src="FruitSearcher/Assets.xcassets/FruitList.imageset/FruitList.png"> 
