@@ -51,22 +51,26 @@ struct NotificationView: View {
             EmptyView()
         }
     }
-    
+
     var body: some View {
         List {
             ForEach(notificationManager.notifications, id:\.identifier) { notification in
                 HStack {
-                    Text(notification.content.title)
-                        .fontWeight(.medium)
+                    VStack(alignment: .leading) {
+                        Text(notification.content.title)
+                            .fontWeight(.medium)
+                        Spacer()
+                            .frame(height: 10)
+                        Text(notification.content.body)
+                            .font(.caption)
+                    }
                     
                     Spacer()
-
+                    
                     Text(timeDisplayText(from: notification))
                         .fontWeight(.bold)
                         .foregroundColor(.purple)
-
-                    
-                }
+                    }
             }
             .onDelete(perform: delete)
         }

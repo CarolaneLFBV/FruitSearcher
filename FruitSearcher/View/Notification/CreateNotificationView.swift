@@ -11,6 +11,7 @@ struct CreateNotificationView: View {
     @ObservedObject var notificationManager: NotificationManager
     @State private var title: String = ""
     @State private var date = Date()
+    @State private var description: String = ""
     @Binding var isPresented: Bool
     
     var body: some View {
@@ -22,10 +23,15 @@ struct CreateNotificationView: View {
                         Text("Please enter the title and the time of your notification.")
                             .font(.subheadline)
                         
-                        HStack {
-                            TextField("Notification Title", text: $title)
-                            Spacer()
-                            DatePicker("", selection: $date, displayedComponents: [.hourAndMinute])
+                        VStack {
+                            HStack {
+                                TextField("Title", text: $title)
+                                DatePicker("", selection: $date, displayedComponents: [.hourAndMinute])
+                            }
+                            .padding()
+                            
+                            TextField("Description...", text: $description)
+                                .padding()
                         }
                         .padding(.vertical, 8)
                         .padding(.horizontal, 12)
@@ -37,7 +43,7 @@ struct CreateNotificationView: View {
                         Button() {
                             let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
                             guard let hour = dateComponents.hour, let minute = dateComponents.minute else { return }
-                            notificationManager.createLocalNotification(title: title, hour: hour, minute: minute) { error in
+                            notificationManager.createLocalNotification(title: title, body: description, hour: hour, minute: minute) { error in
                                 if error == nil {
                                     DispatchQueue.main.async {
                                         self.isPresented = false

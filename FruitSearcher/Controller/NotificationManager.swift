@@ -37,7 +37,7 @@ final class NotificationManager: ObservableObject {
         }
     }
     //MARK: - ReloadLocalNotification
-    func createLocalNotification(title: String, hour: Int, minute: Int, completion: @escaping (Error?) -> Void) {
+    func createLocalNotification(title: String, body: String, hour: Int, minute: Int, completion: @escaping (Error?) -> Void) {
         var dateComponents = DateComponents()
         dateComponents.hour = hour
         dateComponents.minute = minute
@@ -46,6 +46,7 @@ final class NotificationManager: ObservableObject {
         
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = title
+        notificationContent.body = body
         notificationContent.sound = .default
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
@@ -56,6 +57,5 @@ final class NotificationManager: ObservableObject {
     //MARK: - DeleteLocalNotification
     func deleteLocalNotification(identifiers: [String]) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-        
     }
 }
