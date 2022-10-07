@@ -158,7 +158,6 @@
 				92F150B128E81DE2005B4804 /* Info.plist */,
 				92528C4728E6E1F00009F65F /* FruitSearcherApp.swift */,
 				92528C4B28E6E1F20009F65F /* Assets.xcassets */,
-				92528C8728E75B880009F65F /* CoreML */,
 				92528C7928E6F1E50009F65F /* Model */,
 				92528C7828E6F1CD0009F65F /* View */,
 				92E2C49128F02FFD001A6F09 /* Controller */,
@@ -256,6 +255,7 @@
 		92E2C49128F02FFD001A6F09 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				92528C8728E75B880009F65F /* CoreML */,
 				92528C7128E6E20E0009F65F /* FruitAPI.swift */,
 				92E2C49228F0300E001A6F09 /* NotificationManager.swift */,
 			);
