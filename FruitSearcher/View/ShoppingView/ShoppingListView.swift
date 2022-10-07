@@ -16,7 +16,7 @@ struct ShoppingListView: View {
     
     @Environment(\.colorScheme) var colorScheme
 
- 
+    // MARK: - searchBar
     var searchBar: some View {
         HStack {
             TextField("Add an ingredient", text: self.$newIngredient)
@@ -32,6 +32,7 @@ struct ShoppingListView: View {
         }
     }
     
+    // MARK: - addIngredient
     func addIngredient() {
         shoppingListStorage.shoppinglists.append(ShoppingList(id: String(shoppingListStorage.shoppinglists.count + 1), shoppingItem: newIngredient))
         addedIngredients += 1
@@ -40,6 +41,7 @@ struct ShoppingListView: View {
         self.newIngredient = ""
     }
     
+    // MARK: - deleteItem
     func deleteItem(at offsets: IndexSet) {
         let index = offsets[offsets.startIndex]
         for i in index..<addedIngredients-1 {
@@ -62,8 +64,6 @@ struct ShoppingListView: View {
                     }.onDelete(perform: self.deleteItem)
                 }
                 .navigationTitle("ShoppingList 🛒")
-                .navigationBarTitleDisplayMode(.inline)
-                //.navigationBarItems(trailing: EditButton())
             }
         }
         .onAppear(perform: {

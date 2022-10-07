@@ -35,7 +35,7 @@ struct TabBar: View {
                 }
                 
             }
-            
+            // MARK: - Verify in which View the user is, and colored the specific View in the TabBar
             HStack {
                 ForEach(0..<3, id: \.self) { number in
                     Button(action: {

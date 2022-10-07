@@ -46,6 +46,7 @@ struct NotificationView: View {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             })
+            .padding()
             
         default:
             EmptyView()
@@ -76,7 +77,7 @@ struct NotificationView: View {
         }
         .listStyle(InsetGroupedListStyle())
         .overlay(infoOverlayView)
-        .navigationTitle("Notifications")
+        .navigationTitle("Notifications 🔔")
         .onAppear(perform: notificationManager.reloadAuthorizationStatus)
         .onChange(of: notificationManager.authorizationStatus) { authorizationStatus in
             switch authorizationStatus {

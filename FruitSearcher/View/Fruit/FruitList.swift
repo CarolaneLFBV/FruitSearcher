@@ -52,8 +52,7 @@ struct FruitList: View {
                         
                     }
                     .searchable(text: $searchText)
-                    .navigationTitle("Fruit list")
-                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Fruit list 🍎")
                     .scrollContentBackground(.hidden)
                 }
                 .onAppear {
@@ -65,7 +64,6 @@ struct FruitList: View {
                         FavoriteFruit.favorites[i] = UserDefaults.standard.bool(forKey: "\(fruits[i].name)isFavorite")
                     }
                 }
-            
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink(destination: SettingsView()) {

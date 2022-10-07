@@ -29,6 +29,7 @@ struct FruitInfos: View {
             Color(UIColor.random)
                 .ignoresSafeArea()
             
+            // MARK: - Top of the view
             VStack {
                     Text(fruit.name)
                     .font(.system(size: 30, weight: .bold, design: .none))
@@ -46,7 +47,6 @@ struct FruitInfos: View {
                     
                     HStack {
                         Text("Fruit's family:")
-                        
                         Text(fruit.family)
                             .foregroundColor(.purple)
                             .bold()
@@ -54,7 +54,8 @@ struct FruitInfos: View {
                 
                     Spacer()
                         .frame(height: 30)
-        
+                
+                // MARK: - Favorite button part of the view
                     VStack {
                         if isFavorite == false {
                             Button() {
@@ -85,6 +86,7 @@ struct FruitInfos: View {
                         Spacer()
                             .frame(height: 30)
                         
+                        // MARK: - Nutritions' list
                         List {
                             Section("Description :") {
                                 HStack {
@@ -132,7 +134,7 @@ struct FruitInfos: View {
                             } else {
                                 isFavorite = true
                             }
-                        }
+                    }
                 }
             }
         }

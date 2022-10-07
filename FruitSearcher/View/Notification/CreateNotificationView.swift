@@ -13,7 +13,6 @@ struct CreateNotificationView: View {
     @State private var date = Date()
     @State private var description: String = ""
     @Binding var isPresented: Bool
-    @FocusState private var isFocused: Bool
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -22,10 +21,8 @@ struct CreateNotificationView: View {
             List {
                 Section {
                     VStack {
-                        
                         Text("Please enter the title and the time of your notification.")
                             .font(.subheadline)
-                            
                         
                         VStack {
                             HStack {
@@ -39,10 +36,6 @@ struct CreateNotificationView: View {
                         }
                         .background(colorScheme == .dark ? Color(UIColor.white).opacity(0.2) : Color(UIColor.lightGray).opacity(0.2))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .focused($isFocused)
-                        .onTapGesture {
-                            isFocused = true
-                        }
                         
                         Spacer()
                         
@@ -59,14 +52,12 @@ struct CreateNotificationView: View {
                         }label: {
                             Text("Create Notification")
                                 .contentShape(Rectangle())
-                                .buttonStyle(PlainButtonStyle())
                                 .padding()
                                 .frame(width: 200, height: 50)
                                 .foregroundColor(colorScheme == .dark ? .white : .purple)
                                 .background(colorScheme == .dark ? .purple : .white)
                                 .clipShape(RoundedRectangle(cornerRadius: 100))
                         }
-                       
                     }
                     .listRowBackground(Color(.systemGroupedBackground))
                 }

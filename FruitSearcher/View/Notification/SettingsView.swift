@@ -9,12 +9,21 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Form {
-            Section {
-                NavigationLink(destination: NotificationView()) {
-                    Text("Gérer les notifications")
+        NavigationStack {
+            Form {
+                Section("Notifications Settings") {
+                    NavigationLink(destination: NotificationView()) {
+                        Text("Notifications 🔔")
+                    }
+                }
+                
+                Section("App Information") {
+                    Text("Version: v1.0.0")
+                    Text("Author: CarolaneLFBV")
+                        .foregroundColor(Color(UIColor.lightGray))
                 }
             }
+            .navigationTitle("Settings ⚙️")
         }
     }
 }

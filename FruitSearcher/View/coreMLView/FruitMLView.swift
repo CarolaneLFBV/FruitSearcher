@@ -18,6 +18,7 @@ struct FruitMLView: View {
     var body: some View {
         NavigationStack {
                 VStack{
+                    // MARK: - Buttons
                     HStack{
                         Image(systemName: "photo")
                             .frame(width: 80, height: 50)
@@ -47,6 +48,7 @@ struct FruitMLView: View {
                     Spacer()
                         .frame(height: 20)
                     
+                    // MARK: - Caption
                     Text("Please take or add any picture.")
                         .foregroundColor(colorScheme == .dark ? .white : .purple)
                         .font(.caption)
@@ -67,6 +69,7 @@ struct FruitMLView: View {
                     Spacer()
                         .frame(height: 30)
                     
+                    // MARK: - AI Button
                     VStack{
                         Button(action: {
                             if uiImage != nil {
@@ -77,7 +80,6 @@ struct FruitMLView: View {
                                 .font(.title)
                                 .foregroundColor(.purple)
                         }
-                        
                         
                         Group {
                             if let imageClass = classifier.imageClass {
@@ -103,7 +105,6 @@ struct FruitMLView: View {
                         
                     }
                 }
-                
                 .sheet(isPresented: $isPresenting){
                     ImagePicker(uiImage: $uiImage, isPresenting:  $isPresenting, sourceType: $sourceType)
                         .onDisappear{
@@ -116,7 +117,6 @@ struct FruitMLView: View {
                 
             .padding()
             .navigationTitle("Fruit Recognition 📷")
-        .navigationBarTitleDisplayMode(.inline)
             }
     }
 }
