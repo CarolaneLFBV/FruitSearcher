@@ -21,6 +21,8 @@ extension UIColor {
 struct FruitInfos: View {
     @State var fruit: Fruit
     
+    @State var isFavorite: Bool = false
+    
     var body: some View {
         ZStack {
             Color(UIColor.random)
@@ -53,6 +55,19 @@ struct FruitInfos: View {
                         .frame(height: 80)
         
                     VStack {
+                        
+                        if isFavorite == false {
+                            Button("Ajouter au favoris") {
+                                FavoriteFruit.favorites[fruit.id] = true
+                                isFavorite = true
+                            }
+                        } else {
+                            Button("Retirer des favoris") {
+                                FavoriteFruit.favorites[fruit.id] = false
+                                isFavorite = false
+                            }
+                        }
+                        
                         List {
                             Section("Description :") {
                                 HStack {
@@ -94,6 +109,13 @@ struct FruitInfos: View {
                         }
                         .font(.system(size: 15, weight: .bold))
                         .scrollContentBackground(.hidden)
+                        .onAppear {
+                            if FavoriteFruit.favorites[fruit.id] != true {
+                                isFavorite = false
+                            } else {
+                                isFavorite = true
+                            }
+                        }
                 }
             }
         }

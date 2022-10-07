@@ -7,6 +7,10 @@
 
 import Foundation
 
+class FavoriteFruit {
+    static var favorites = [Int: Bool]()
+}
+
 struct Fruit: Codable, Identifiable {
     var id: Int
     var name: String

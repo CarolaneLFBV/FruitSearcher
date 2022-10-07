@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct ShoppingList : Identifiable {
+struct ShoppingList : Identifiable, Codable {
     var id = String()
     var shoppingItem = String()
 }

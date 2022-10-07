@@ -26,6 +26,12 @@
 		92528C8E28E75CF80009F65F /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8D28E75CF80009F65F /* Classifier.swift */; };
 		92528C9028E75D690009F65F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8F28E75D690009F65F /* ImagePicker.swift */; };
 		926872A828EEE8FC0089C811 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */; };
+		926872B028EF1C030089C811 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926872AF28EF1C030089C811 /* WidgetKit.framework */; };
+		926872B228EF1C030089C811 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926872B128EF1C030089C811 /* SwiftUI.framework */; };
+		926872BE28EF1C050089C811 /* WidgetFSExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 926872AD28EF1C030089C811 /* WidgetFSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		926872C328EF25720089C811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92528C4B28E6E1F20009F65F /* Assets.xcassets */; };
+		926872C528EF284E0089C811 /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7E28E7144B0009F65F /* ShoppingListModel.swift */; };
+		926872C628EF28520089C811 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7C28E7143E0009F65F /* ShoppingListView.swift */; };
 		927CFE7628EEB65B001F5D0C /* fruit.json in Resources */ = {isa = PBXBuildFile; fileRef = 927CFE7528EEB65B001F5D0C /* fruit.json */; };
 		92F150B328E82087005B4804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F150B228E82087005B4804 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -45,7 +51,28 @@
 			remoteGlobalIDString = 92528C4328E6E1F00009F65F;
 			remoteInfo = FruitSearcher;
 		};
+		926872BC28EF1C050089C811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92528C3C28E6E1F00009F65F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 926872AC28EF1C030089C811;
+			remoteInfo = WidgetFSExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		926872C228EF1C050089C811 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				926872BE28EF1C050089C811 /* WidgetFSExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		92528C4428E6E1F00009F65F /* FruitSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +97,9 @@
 		92528C8D28E75CF80009F65F /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		92528C8F28E75D690009F65F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
+		926872AD28EF1C030089C811 /* WidgetFSExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetFSExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		926872AF28EF1C030089C811 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		926872B128EF1C030089C811 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		927CFE7528EEB65B001F5D0C /* fruit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fruit.json; sourceTree = "<group>"; };
 		92F150B128E81DE2005B4804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92F150B228E82087005B4804 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		926872AA28EF1C030089C811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926872B228EF1C030089C811 /* SwiftUI.framework in Frameworks */,
+				926872B028EF1C030089C811 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +145,7 @@
 				92528C4628E6E1F00009F65F /* FruitSearcher */,
 				92528C5728E6E1F20009F65F /* FruitSearcherTests */,
 				92528C6128E6E1F20009F65F /* FruitSearcherUITests */,
+				926872AE28EF1C030089C811 /* Frameworks */,
 				92528C4528E6E1F00009F65F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +156,7 @@
 				92528C4428E6E1F00009F65F /* FruitSearcher.app */,
 				92528C5428E6E1F20009F65F /* FruitSearcherTests.xctest */,
 				92528C5E28E6E1F20009F65F /* FruitSearcherUITests.xctest */,
+				926872AD28EF1C030089C811 /* WidgetFSExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +252,15 @@
 			path = CoreML;
 			sourceTree = "<group>";
 		};
+		926872AE28EF1C030089C811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926872AF28EF1C030089C811 /* WidgetKit.framework */,
+				926872B128EF1C030089C811 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,10 +271,12 @@
 				92528C4028E6E1F00009F65F /* Sources */,
 				92528C4128E6E1F00009F65F /* Frameworks */,
 				92528C4228E6E1F00009F65F /* Resources */,
+				926872C228EF1C050089C811 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				926872BD28EF1C050089C811 /* PBXTargetDependency */,
 			);
 			name = FruitSearcher;
 			productName = FruitSearcher;
@@ -267,6 +319,23 @@
 			productReference = 92528C5E28E6E1F20009F65F /* FruitSearcherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		926872AC28EF1C030089C811 /* WidgetFSExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 926872BF28EF1C050089C811 /* Build configuration list for PBXNativeTarget "WidgetFSExtension" */;
+			buildPhases = (
+				926872A928EF1C030089C811 /* Sources */,
+				926872AA28EF1C030089C811 /* Frameworks */,
+				926872AB28EF1C030089C811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetFSExtension;
+			productName = WidgetFSExtension;
+			productReference = 926872AD28EF1C030089C811 /* WidgetFSExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,6 +357,9 @@
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 92528C4328E6E1F00009F65F;
 					};
+					926872AC28EF1C030089C811 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 92528C3F28E6E1F00009F65F /* Build configuration list for PBXProject "FruitSearcher" */;
@@ -306,6 +378,7 @@
 				92528C4328E6E1F00009F65F /* FruitSearcher */,
 				92528C5328E6E1F20009F65F /* FruitSearcherTests */,
 				92528C5D28E6E1F20009F65F /* FruitSearcherUITests */,
+				926872AC28EF1C030089C811 /* WidgetFSExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +406,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		926872AB28EF1C030089C811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926872C328EF25720089C811 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +458,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		926872A928EF1C030089C811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926872C628EF28520089C811 /* ShoppingListView.swift in Sources */,
+				926872C528EF284E0089C811 /* ShoppingListModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -389,6 +479,11 @@
 			isa = PBXTargetDependency;
 			target = 92528C4328E6E1F00009F65F /* FruitSearcher */;
 			targetProxy = 92528C5F28E6E1F20009F65F /* PBXContainerItemProxy */;
+		};
+		926872BD28EF1C050089C811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 926872AC28EF1C030089C811 /* WidgetFSExtension */;
+			targetProxy = 926872BC28EF1C050089C811 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -510,6 +605,7 @@
 		92528C6928E6E1F20009F65F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -548,6 +644,7 @@
 		92528C6A28E6E1F20009F65F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -659,6 +756,62 @@
 			};
 			name = Release;
 		};
+		926872C028EF1C050089C811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2VP2J2SZVR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetFS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetFS;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carolanelfbv.FruitSearcher.WidgetFS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		926872C128EF1C050089C811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2VP2J2SZVR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetFS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetFS;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carolanelfbv.FruitSearcher.WidgetFS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -694,6 +847,15 @@
 			buildConfigurations = (
 				92528C6F28E6E1F20009F65F /* Debug */,
 				92528C7028E6E1F20009F65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		926872BF28EF1C050089C811 /* Build configuration list for PBXNativeTarget "WidgetFSExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926872C028EF1C050089C811 /* Debug */,
+				926872C128EF1C050089C811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

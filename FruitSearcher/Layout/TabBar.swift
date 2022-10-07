@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TabBar: View {
     @State private var selectedIndex = 0
+    @Environment(\.colorScheme) var colorScheme
     
     let icons = [
     "basket",
@@ -52,12 +53,13 @@ struct TabBar: View {
                                 .font(.system(size: 10,
                                               weight: .regular,
                                               design: .default))
-                            .foregroundColor(selectedIndex == number ? Color("ColorPurple") : Color(UIColor.lightGray))
+                                .foregroundColor(selectedIndex == number ? Color("ColorPurple") : Color(UIColor.lightGray))
                         }
                         Spacer()
                     })
                 }
             }
+            .animation(.easeOut(duration: 0.8), value: selectedIndex)
         }
     }
 }
