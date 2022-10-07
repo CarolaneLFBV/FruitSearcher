@@ -11,6 +11,7 @@ struct FruitList: View {
     @State var fruits = [Fruit]()
     @State private var searchText = ""
     @Environment(\.colorScheme) var colorScheme
+    @State private var showSettings = false
     
     var searchResults: [Fruit] {
         if searchText.isEmpty {
@@ -64,6 +65,15 @@ struct FruitList: View {
                         FavoriteFruit.favorites[i] = UserDefaults.standard.bool(forKey: "\(fruits[i].name)isFavorite")
                     }
                 }
+            
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: SettingsView()) {
+                            Label("Paramètres", systemImage: "gear")
+                                .foregroundColor(.purple)
+                    }
+                }
+            })
         }
     }
 }

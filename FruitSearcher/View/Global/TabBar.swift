@@ -27,7 +27,7 @@ struct TabBar: View {
                     ShoppingListView()
                     
                 case 2:
-                    FruitML(classifier: ImageClassifier())
+                    FruitMLView(classifier: ImageClassifier())
 
                 default:
                     FruitList()

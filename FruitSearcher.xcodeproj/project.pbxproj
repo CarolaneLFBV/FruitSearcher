@@ -21,12 +21,17 @@
 		92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C7E28E7144B0009F65F /* ShoppingListModel.swift */; };
 		92528C8128E715620009F65F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8028E715620009F65F /* TabBar.swift */; };
 		92528C8428E738810009F65F /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8328E738810009F65F /* FruitModel.swift */; };
-		92528C8A28E75C370009F65F /* FruitML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8928E75C370009F65F /* FruitML.swift */; };
+		92528C8A28E75C370009F65F /* FruitMLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8928E75C370009F65F /* FruitMLView.swift */; };
 		92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8B28E75CC60009F65F /* ImageClassifier.swift */; };
 		92528C8E28E75CF80009F65F /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8D28E75CF80009F65F /* Classifier.swift */; };
 		92528C9028E75D690009F65F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92528C8F28E75D690009F65F /* ImagePicker.swift */; };
 		926872A828EEE8FC0089C811 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 926872A728EEE8FC0089C811 /* FruitClassifier.mlmodel */; };
 		927CFE7628EEB65B001F5D0C /* fruit.json in Resources */ = {isa = PBXBuildFile; fileRef = 927CFE7528EEB65B001F5D0C /* fruit.json */; };
+		9290F36228F053CF002D941E /* CreateNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9290F36128F053CF002D941E /* CreateNotificationView.swift */; };
+		9290F36628F064B4002D941E /* InfoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9290F36528F064B4002D941E /* InfoOverlayView.swift */; };
+		92E2C49028F0271A001A6F09 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2C48F28F0271A001A6F09 /* SettingsView.swift */; };
+		92E2C49328F0300E001A6F09 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2C49228F0300E001A6F09 /* NotificationManager.swift */; };
+		92E2C49528F051D4001A6F09 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2C49428F051D4001A6F09 /* NotificationView.swift */; };
 		92F150B328E82087005B4804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F150B228E82087005B4804 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +83,7 @@
 		92528C7E28E7144B0009F65F /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		92528C8028E715620009F65F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		92528C8328E738810009F65F /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
-		92528C8928E75C370009F65F /* FruitML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitML.swift; sourceTree = "<group>"; };
+		92528C8928E75C370009F65F /* FruitMLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitMLView.swift; sourceTree = "<group>"; };
 		92528C8B28E75CC60009F65F /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		92528C8D28E75CF80009F65F /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		92528C8F28E75D690009F65F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -86,6 +91,11 @@
 		926872AF28EF1C030089C811 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		926872B128EF1C030089C811 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		927CFE7528EEB65B001F5D0C /* fruit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fruit.json; sourceTree = "<group>"; };
+		9290F36128F053CF002D941E /* CreateNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationView.swift; sourceTree = "<group>"; };
+		9290F36528F064B4002D941E /* InfoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOverlayView.swift; sourceTree = "<group>"; };
+		92E2C48F28F0271A001A6F09 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		92E2C49228F0300E001A6F09 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		92E2C49428F051D4001A6F09 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		92F150B128E81DE2005B4804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92F150B228E82087005B4804 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,13 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				92F150B128E81DE2005B4804 /* Info.plist */,
-				92528C8728E75B880009F65F /* CoreML */,
-				92528C8228E7157E0009F65F /* Layout */,
-				92528C7928E6F1E50009F65F /* Model */,
-				92528C7828E6F1CD0009F65F /* View */,
-				92528C7728E6F1B40009F65F /* API */,
 				92528C4728E6E1F00009F65F /* FruitSearcherApp.swift */,
 				92528C4B28E6E1F20009F65F /* Assets.xcassets */,
+				92528C8728E75B880009F65F /* CoreML */,
+				92528C7928E6F1E50009F65F /* Model */,
+				92528C7828E6F1CD0009F65F /* View */,
+				92E2C49128F02FFD001A6F09 /* Controller */,
 				92528C4D28E6E1F20009F65F /* Preview Content */,
 			);
 			path = FruitSearcher;
@@ -178,21 +187,14 @@
 			path = FruitSearcherUITests;
 			sourceTree = "<group>";
 		};
-		92528C7728E6F1B40009F65F /* API */ = {
-			isa = PBXGroup;
-			children = (
-				92528C7128E6E20E0009F65F /* FruitAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		92528C7828E6F1CD0009F65F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				92528C8928E75C370009F65F /* FruitML.swift */,
-				92528C7C28E7143E0009F65F /* ShoppingListView.swift */,
-				92528C7328E6E2A90009F65F /* FruitList.swift */,
-				92528C7528E6E2F00009F65F /* FruitInfos.swift */,
+				92E2C49828F05389001A6F09 /* Global */,
+				92E2C49728F05369001A6F09 /* Fruit */,
+				9290F36428F05F00002D941E /* ShoppingView */,
+				92E2C49628F05347001A6F09 /* Notification */,
+				9290F36328F05EEC002D941E /* coreMLView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,16 +206,6 @@
 				92528C8328E738810009F65F /* FruitModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		92528C8228E7157E0009F65F /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				92528C8028E715620009F65F /* TabBar.swift */,
-				92528C4928E6E1F00009F65F /* ContentView.swift */,
-				92F150B228E82087005B4804 /* LaunchScreen.storyboard */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		92528C8728E75B880009F65F /* CoreML */ = {
@@ -234,6 +226,61 @@
 				926872B128EF1C030089C811 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9290F36328F05EEC002D941E /* coreMLView */ = {
+			isa = PBXGroup;
+			children = (
+				92528C8928E75C370009F65F /* FruitMLView.swift */,
+			);
+			path = coreMLView;
+			sourceTree = "<group>";
+		};
+		9290F36428F05F00002D941E /* ShoppingView */ = {
+			isa = PBXGroup;
+			children = (
+				92528C7C28E7143E0009F65F /* ShoppingListView.swift */,
+			);
+			path = ShoppingView;
+			sourceTree = "<group>";
+		};
+		92E2C49128F02FFD001A6F09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92528C7128E6E20E0009F65F /* FruitAPI.swift */,
+				92E2C49228F0300E001A6F09 /* NotificationManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92E2C49628F05347001A6F09 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				92E2C49428F051D4001A6F09 /* NotificationView.swift */,
+				9290F36128F053CF002D941E /* CreateNotificationView.swift */,
+				9290F36528F064B4002D941E /* InfoOverlayView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		92E2C49728F05369001A6F09 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				92528C7528E6E2F00009F65F /* FruitInfos.swift */,
+				92528C7328E6E2A90009F65F /* FruitList.swift */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		92E2C49828F05389001A6F09 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				92F150B228E82087005B4804 /* LaunchScreen.storyboard */,
+				92528C4928E6E1F00009F65F /* ContentView.swift */,
+				92528C8028E715620009F65F /* TabBar.swift */,
+				92E2C48F28F0271A001A6F09 /* SettingsView.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,18 +416,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E2C49028F0271A001A6F09 /* SettingsView.swift in Sources */,
+				9290F36228F053CF002D941E /* CreateNotificationView.swift in Sources */,
 				92528C7D28E7143E0009F65F /* ShoppingListView.swift in Sources */,
 				92528C7F28E7144B0009F65F /* ShoppingListModel.swift in Sources */,
 				92528C8128E715620009F65F /* TabBar.swift in Sources */,
 				926872A828EEE8FC0089C811 /* FruitClassifier.mlmodel in Sources */,
 				92528C9028E75D690009F65F /* ImagePicker.swift in Sources */,
+				92E2C49528F051D4001A6F09 /* NotificationView.swift in Sources */,
+				92E2C49328F0300E001A6F09 /* NotificationManager.swift in Sources */,
 				92528C8E28E75CF80009F65F /* Classifier.swift in Sources */,
-				92528C8A28E75C370009F65F /* FruitML.swift in Sources */,
+				92528C8A28E75C370009F65F /* FruitMLView.swift in Sources */,
 				92528C8C28E75CC60009F65F /* ImageClassifier.swift in Sources */,
 				92528C7428E6E2A90009F65F /* FruitList.swift in Sources */,
 				92528C4A28E6E1F00009F65F /* ContentView.swift in Sources */,
 				92528C7628E6E2F00009F65F /* FruitInfos.swift in Sources */,
 				92528C4828E6E1F00009F65F /* FruitSearcherApp.swift in Sources */,
+				9290F36628F064B4002D941E /* InfoOverlayView.swift in Sources */,
 				92528C8428E738810009F65F /* FruitModel.swift in Sources */,
 				92528C7228E6E20E0009F65F /* FruitAPI.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  FruitML.swift
+//  FruitMLView.swift
 //  FruitSearcher
 //
 //  Created by Carolane on 30/09/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FruitML: View {
+struct FruitMLView: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
@@ -121,8 +121,8 @@ struct FruitML: View {
     }
 }
 
-struct FruitML_Previews: PreviewProvider {
+struct FruitMLView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitML(classifier: ImageClassifier())
+        FruitMLView(classifier: ImageClassifier())
     }
 }

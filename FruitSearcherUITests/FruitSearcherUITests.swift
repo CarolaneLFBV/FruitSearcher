@@ -52,11 +52,6 @@ final class FruitSearcherUITests: XCTestCase {
     func testCoreML() throws {
         let app = XCUIApplication()
         app.launch()
-        
-        app.tabBars["Tab Bar"].buttons["Fruit Recognition"].tap()
-        app.images["Photo"].tap()
-        app/*@START_MENU_TOKEN@*/.scrollViews.otherElements.images["Photo, 30 septembre, 7:44 PM"]/*[[".otherElements[\"Photos\"].scrollViews.otherElements",".otherElements[\"Photo, 01 octobre, 6:21 PM, Photo, 30 septembre, 7:44 PM, Photo, Raw Red Organic Strawberries in a Bunch, 30 septembre, 7:26 PM, Photo, 30 mars 2018, 9:14 PM, Photo, 08 août 2012, 11:55 PM, Photo, 08 août 2012, 11:29 PM, Photo, 08 août 2012, 8:52 PM, Photo, 09 octobre 2009, 11:09 PM, Photo, 13 mars 2011, 1:17 AM\"].images[\"Photo, 30 septembre, 7:44 PM\"]",".images[\"Photo, 30 septembre, 7:44 PM\"]",".scrollViews.otherElements"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.tap()
-
     }
 
     func testLaunchPerformance() throws {
