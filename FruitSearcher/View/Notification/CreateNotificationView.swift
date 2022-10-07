@@ -46,6 +46,7 @@ struct CreateNotificationView: View {
                             }
                         }label: {
                             Text("Create Notification")
+                                .contentShape(Rectangle())
                         }
                         .padding()
                         .frame(width: 200, height: 50)

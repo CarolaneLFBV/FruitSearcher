@@ -256,6 +256,7 @@
 		92E2C49628F05347001A6F09 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				92E2C48F28F0271A001A6F09 /* SettingsView.swift */,
 				92E2C49428F051D4001A6F09 /* NotificationView.swift */,
 				9290F36128F053CF002D941E /* CreateNotificationView.swift */,
 				9290F36528F064B4002D941E /* InfoOverlayView.swift */,
@@ -278,7 +279,6 @@
 				92F150B228E82087005B4804 /* LaunchScreen.storyboard */,
 				92528C4928E6E1F00009F65F /* ContentView.swift */,
 				92528C8028E715620009F65F /* TabBar.swift */,
-				92E2C48F28F0271A001A6F09 /* SettingsView.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
