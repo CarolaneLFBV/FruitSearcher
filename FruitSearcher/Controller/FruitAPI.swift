@@ -17,7 +17,7 @@ class FruitAPI : ObservableObject{
         }
         URLSession.shared.dataTask(with: url) { data, response, error in
             let fruits = try! JSONDecoder().decode([Fruit].self, from: data!)
-            print(fruits)
+            //print(fruits)
             DispatchQueue.main.async {
                 completion(fruits)
             }

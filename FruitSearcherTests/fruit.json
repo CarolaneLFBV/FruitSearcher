@@ -3,7 +3,7 @@
     "name": "Apple",
     "family": "Rosaceae",
     "order": "Rosales",
-    "nutrition": {
+    "nutritions": {
         "carbohydrates": 11.4,
         "protein": 0.3,
         "fat": 0.4,
