@@ -12,14 +12,19 @@ final class FruitSearcherTests: XCTestCase {
 
     var fruit: Fruit?
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+       do {
+            let testBundle = Bundle(for: type(of: self))
+            if let url = testBundle.url(forResource: "fruit", withExtension: "json") {
+                let jsonData = try Data(contentsOf: url)
+                self.fruit = try JSONDecoder().decode(Fruit.self, from: jsonData)
+            }
+        } catch {
+            print("Erreur")
+        }
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testId() {
         XCTAssertEqual(fruit?.id, 6)
     }

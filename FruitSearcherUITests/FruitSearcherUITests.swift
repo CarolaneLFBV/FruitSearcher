@@ -29,30 +29,6 @@ final class FruitSearcherUITests: XCTestCase {
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testFruitInfos() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-        
-        app.tabBars["Tab Bar"].buttons["Fruit list"].tap()
-        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Apple"]/*[[".cells.buttons[\"Apple\"]",".buttons[\"Apple\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars["_TtGC7SwiftUI32NavigationStackHosting"].buttons["Fruit list"].tap()
-    }
-    
-    func testShopping() throws {
-        let app = XCUIApplication()
-        app.launch()
-        
-        app.tabBars["Tab Bar"].buttons["Shopping list"].tap()
-        app.buttons["Add"].tap()
-        app.collectionViews.cells.children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .staticText).element.swipeLeft()
-    }
-    
-    func testCoreML() throws {
-        let app = XCUIApplication()
-        app.launch()
-    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
