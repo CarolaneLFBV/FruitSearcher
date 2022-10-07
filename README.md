@@ -40,8 +40,5 @@ The next and last feature grant the user to use **with his permission**, his pho
 <img width="300" height="430" src="FruitSearcher/Assets.xcassets/FruitML.imageset/FruitML.png"><img width="300" height="430" src="FruitSearcher/Assets.xcassets/FruitML2.imageset/FruitML2.png">
 </div>
 
-### Model Used
-For now, the coreML model used is **MobileNetV2**. 
-
-
-<sub>Nonetheless, I have the ambition to develop a personnalized AI that recognizes fruits ^^</sub>
+### AI Model Used
+The coreML model used here is a model that I developed myself : **FruitClassifier**
