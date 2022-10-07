@@ -13,13 +13,21 @@ struct ShoppingListView: View {
     @State private var newIngredient: String = ""
     @State private var addedIngredients = 0
     @State private var didLoad = true
+    
+    @Environment(\.colorScheme) var colorScheme
+
  
     var searchBar: some View {
         HStack {
             TextField("Add an ingredient", text: self.$newIngredient)
+                .padding(.leading, 20)
+                .frame(height: 40)
+                .background(colorScheme == .dark ? Color(UIColor.white).opacity(0.2) : Color(UIColor.lightGray).opacity(0.2))
+                .clipShape(RoundedRectangle(cornerRadius: 100))
             Button(action: addIngredient, label: {
                 Image(systemName: "plus")
-                    .foregroundColor(Color("ColorPurple"))
+                    .font(.system(size: 20))
+                    .foregroundColor(.purple)
             })
         }
     }

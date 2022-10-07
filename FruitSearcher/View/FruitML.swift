@@ -11,8 +11,9 @@ struct FruitML: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    
     @ObservedObject var classifier: ImageClassifier
+    
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack {
@@ -20,8 +21,8 @@ struct FruitML: View {
                     HStack{
                         Image(systemName: "photo")
                             .frame(width: 80, height: 50)
-                            .foregroundColor(Color("ColorPurple"))
-                            .background(.white)
+                            .foregroundColor(colorScheme == .dark ? .white : .purple)
+                            .background(colorScheme == .dark ? .purple : .white)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .shadow(color: .black, radius: 3, x: 0, y:0 )
                             .onTapGesture {
@@ -31,8 +32,8 @@ struct FruitML: View {
                         
                         Image(systemName: "camera")
                             .frame(width: 80, height: 50)
-                            .foregroundColor(Color("ColorPurple"))
-                            .background(.white)
+                            .foregroundColor(colorScheme == .dark ? .white : .purple)
+                            .background(colorScheme == .dark ? .purple : .white)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .shadow(color: .black, radius: 3, x: 0, y:0 )
                             .onTapGesture {
@@ -47,11 +48,12 @@ struct FruitML: View {
                         .frame(height: 20)
                     
                     Text("Please take or add any picture.")
+                        .foregroundColor(colorScheme == .dark ? .white : .purple)
                         .font(.caption)
                     
                     Rectangle()
                         .strokeBorder()
-                        .foregroundColor(.white)
+                        .foregroundColor(colorScheme == .dark ? .white : .purple)
                         .overlay(
                             Group {
                                 if uiImage != nil {
@@ -62,6 +64,9 @@ struct FruitML: View {
                             }
                         )
                     
+                    Spacer()
+                        .frame(height: 30)
+                    
                     VStack{
                         Button(action: {
                             if uiImage != nil {
@@ -70,7 +75,7 @@ struct FruitML: View {
                         }) {
                             Image(systemName: "magnifyingglass")
                                 .font(.title)
-                                .foregroundColor(Color("ColorPurple"))
+                                .foregroundColor(.purple)
                         }
                         
                         
@@ -88,7 +93,7 @@ struct FruitML: View {
                                         .font(.caption)
                                     Text("N/A")
                                         .font(.caption)
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                         .bold()
                                 }
                             }

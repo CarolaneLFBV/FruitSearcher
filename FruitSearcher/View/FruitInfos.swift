@@ -20,8 +20,9 @@ extension UIColor {
 
 struct FruitInfos: View {
     @State var fruit: Fruit
-    
     @State var isFavorite: Bool = false
+    @Environment(\.colorScheme) var colorScheme
+
     
     var body: some View {
         ZStack {
@@ -31,7 +32,7 @@ struct FruitInfos: View {
             VStack {
                     Text(fruit.name)
                     .font(.system(size: 30, weight: .bold, design: .none))
-                        .foregroundColor(Color("ColorPurple"))
+                    .foregroundColor(.white)
                         
                     Spacer()
                         .frame(height: 1)
@@ -47,26 +48,43 @@ struct FruitInfos: View {
                         Text("Fruit's family:")
                         
                         Text(fruit.family)
-                            .foregroundColor(Color("ColorPurple"))
+                            .foregroundColor(.purple)
                             .bold()
                     }
                 
                     Spacer()
-                        .frame(height: 80)
+                        .frame(height: 30)
         
                     VStack {
-                        
                         if isFavorite == false {
-                            Button("Ajouter au favoris") {
+                            Button() {
                                 FavoriteFruit.favorites[fruit.id] = true
                                 isFavorite = true
+                            } label: {
+                                Label("Ajouter aux favoris", systemImage: "star")
+                                    .frame(height: 20)
+                                    .foregroundColor(colorScheme == .dark ? .white : .purple)
+                                    .padding()
+                                    .background(colorScheme == .dark ? .purple : .white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 100))
+
                             }
                         } else {
-                            Button("Retirer des favoris") {
+                            Button() {
                                 FavoriteFruit.favorites[fruit.id] = false
                                 isFavorite = false
+                            } label: {
+                                Label("Retirer des favoris", systemImage: "star.fill")
+                                    .frame(height: 20)
+                                    .foregroundColor(colorScheme == .dark ? .white : .purple)
+                                    .padding()
+                                    .background(colorScheme == .dark ? .purple : .white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 100))
                             }
                         }
+                        
+                        Spacer()
+                            .frame(height: 30)
                         
                         List {
                             Section("Description :") {
@@ -74,35 +92,35 @@ struct FruitInfos: View {
                                     Text("Carbohydrates: ")
                                     Spacer()
                                     Text("\(fruit.nutritions.carbohydrates, specifier: "%.2f")")
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                 }
                                 
                                 HStack {
                                     Text("Protein: ")
                                     Spacer()
                                     Text("\(fruit.nutritions.protein, specifier: "%.2f")")
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                 }
                                 
                                 HStack {
                                     Text("Fat: ")
                                     Spacer()
                                     Text("\(fruit.nutritions.fat, specifier: "%.2f")")
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                 }
                                 
                                 HStack {
                                     Text("Calories: ")
                                     Spacer()
                                     Text("\(fruit.nutritions.calories, specifier: "%.2f")")
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                 }
                                 
                                 HStack {
                                     Text("Sugar: ")
                                     Spacer()
                                     Text("\(fruit.nutritions.sugar, specifier: "%.2f")")
-                                        .foregroundColor(Color("ColorPurple"))
+                                        .foregroundColor(.purple)
                                 }
 
                             }

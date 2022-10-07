@@ -47,13 +47,13 @@ struct TabBar: View {
                                 .font(.system(size: 25,
                                               weight: .regular,
                                               design: .default))
-                                .foregroundColor(selectedIndex == number ? Color("ColorPurple") : Color(UIColor.lightGray))
+                                .foregroundColor(selectedIndex == number ? .purple : Color(UIColor.lightGray))
                             
                             Text(names[number])
                                 .font(.system(size: 10,
                                               weight: .regular,
                                               design: .default))
-                                .foregroundColor(selectedIndex == number ? Color("ColorPurple") : Color(UIColor.lightGray))
+                                .foregroundColor(selectedIndex == number ? .purple : Color(UIColor.lightGray))
                         }
                         Spacer()
                     })
