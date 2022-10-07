@@ -10,6 +10,7 @@ import SwiftUI
 struct FruitList: View {
     @State var fruits = [Fruit]()
     @State private var searchText = ""
+    @Environment(\.colorScheme) var colorScheme
     
     var searchResults: [Fruit] {
         if searchText.isEmpty {
@@ -34,6 +35,16 @@ struct FruitList: View {
                                     
                                     Text(fruit.name)
                                         .font(.system(size: 20, weight: .medium))
+                                    
+                                    Spacer()
+                                    
+                                    if FavoriteFruit.favorites[fruit.id] != true {
+                                        Image(systemName: "star")
+                                            .foregroundColor(colorScheme == .dark ? .white : .purple)
+                                    } else {
+                                        Image(systemName: "star.fill")
+                                            .foregroundColor(colorScheme == .dark ? .white : .purple)
+                                    }
                                 }
                             }
                         }
@@ -47,6 +58,10 @@ struct FruitList: View {
                 .onAppear {
                     FruitAPI().loadData { (fruits) in
                         self.fruits = fruits
+                    }
+                    
+                    for i in 0..<fruits.count {
+                        FavoriteFruit.favorites[i] = UserDefaults.standard.bool(forKey: "\(fruits[i].name)isFavorite")
                     }
                 }
         }

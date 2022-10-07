@@ -67,7 +67,6 @@ struct FruitInfos: View {
                                     .padding()
                                     .background(colorScheme == .dark ? .purple : .white)
                                     .clipShape(RoundedRectangle(cornerRadius: 100))
-
                             }
                         } else {
                             Button() {
