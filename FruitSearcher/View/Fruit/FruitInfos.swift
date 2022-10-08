@@ -61,6 +61,7 @@ struct FruitInfos: View {
                             Button() {
                                 FavoriteFruit.favorites[fruit.id] = true
                                 isFavorite = true
+                                UserDefaults.standard.set(FavoriteFruit.favorites[fruit.id], forKey: "\(fruit.id)")
                             } label: {
                                 Label("Ajouter aux favoris", systemImage: "star")
                                     .frame(height: 20)
@@ -73,6 +74,7 @@ struct FruitInfos: View {
                             Button() {
                                 FavoriteFruit.favorites[fruit.id] = false
                                 isFavorite = false
+                                UserDefaults.standard.set(FavoriteFruit.favorites[fruit.id], forKey: "\(fruit.id)")
                             } label: {
                                 Label("Retirer des favoris", systemImage: "star.fill")
                                     .frame(height: 20)

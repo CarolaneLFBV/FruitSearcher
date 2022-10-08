@@ -58,10 +58,9 @@ struct FruitList: View {
                 .onAppear {
                     FruitAPI().loadData { (fruits) in
                         self.fruits = fruits
-                    }
-                    
-                    for i in 0..<fruits.count {
-                        FavoriteFruit.favorites[i] = UserDefaults.standard.bool(forKey: "\(fruits[i].name)isFavorite")
+                        for fruit in self.fruits {
+                            FavoriteFruit.favorites[fruit.id] = UserDefaults.standard.bool(forKey: "\(fruit.id)")
+                        }
                     }
                 }
                 .toolbar(content: {

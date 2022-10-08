@@ -40,6 +40,26 @@ final class FruitSearcherTests: XCTestCase {
     func testOrder() {
         XCTAssertEqual(fruit?.order, "Rosales")
     }
+    
+    func testNutritionsCarbohydrates() {
+        XCTAssertEqual(fruit?.nutritions.carbohydrates, 11.4)
+    }
+    
+    func testNutritionsProtein() {
+        XCTAssertEqual(fruit?.nutritions.protein, 0.3)
+    }
+    
+    func testNutritionsFat() {
+        XCTAssertEqual(fruit?.nutritions.fat, 0.4)
+    }
+    
+    func testNutritionsCalories() {
+        XCTAssertEqual(fruit?.nutritions.calories, 52.0)
+    }
+    
+    func testNutritionsSugar() {
+        XCTAssertEqual(fruit?.nutritions.sugar, 10.3)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
