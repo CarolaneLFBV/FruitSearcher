@@ -5,6 +5,14 @@
 FruitSearcher is an iOS application that retrieves a list of fruits, allow the user to interact with data such as a shopping, the fruit's list, and
 can also interact with a fruit recognition coreML model that recognizes fruits.
 
+---
+
+* Language: Swift, SwiftUI
+* Framework: CoreML
+* Design Patter: MVC
+
+---
+
 ## Fruit List
 ### Interact with the list
 The user can interact with the list by clicking on one of the elements available on the interface.
