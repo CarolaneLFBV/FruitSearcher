@@ -2,8 +2,7 @@
 
 <p align="center"> <img width="150" height="150" src="FruitSearcher/Assets.xcassets/FruitSearcher.imageset/FruitSearcher.png"> </p>
 
-FruitSearcher is an iOS application that retrieves a list of fruits, allow the user to interact with data such as a shopping, the fruit's list, and
-can also interact with a fruit recognition coreML model that recognizes fruits.
+Fruit Recognition app
 
 ---
 
